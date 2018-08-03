@@ -30,7 +30,7 @@ def count_char_insensitive(text):
     d = {}
     for i in text:
         i.lower()
-        letter = i
+        letter = i.lower()
         if letter in d:
             d[letter] += 1
         else:
@@ -46,7 +46,7 @@ def count_char_ordered(text):
     d = {}
     for i in text:
         i.lower()
-        letter = i
+        letter = i.lower()
         if letter in d:
             d[letter] += 1
         else:

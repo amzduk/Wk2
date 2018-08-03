@@ -30,7 +30,14 @@ def find_descending(numbers):
 
 def second_smallest(numbers):
     #TODO: find the second smallest
-    return(sorted(numbers)[1])
+    a = 1
+    list = sorted(numbers)
+    smallest = list[0]
+    next = list[a]
+    while next == smallest:
+        a += 1
+        next = sorted(numbers)[a]
+    return(next)
     pass
 
 
@@ -41,5 +48,18 @@ def second_smallest(numbers):
 '''
 def kth_smallest(numbers, k):
     #TODO: find the kth smallest number in the list
-    return(sorted(numbers)[k-1])
+    a = 1
+    list = sorted(numbers)
+    smallest = list[0]
+    if k == 1:
+        return(smallest)
+    next = list[a]
+    count = 1
+    while count != k:
+        while next == smallest:
+            a += 1
+            next = sorted(numbers)[a]
+        smallest = next
+        count += 1
+    return(next)
     pass

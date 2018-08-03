@@ -23,7 +23,7 @@ fib_dict = {
 # Do not print it from this function
 def fib_sequence(num):
     counter = 3
-    while num > counter:
+    if num > counter:
         counter += 1
         fib_dict[counter] = fib_dict[counter-1] + fib_dict[counter-2]
     return fib_dict[num]
