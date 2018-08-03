@@ -29,7 +29,7 @@ def count_char_insensitive(text):
     # add your code here
     d = {}
     for i in text:
-	i.lower()
+        i.lower()
         letter = i
         if letter in d:
             d[letter] += 1
@@ -46,14 +46,14 @@ def count_char_ordered(text):
     d = {}
     for i in text:
         i.lower()
-        letter = i      
+        letter = i
         if letter in d:
             d[letter] += 1
         else:
             d[letter] = 1
     
     a = 0
-    count = d.Values.Max()
+    count = max(d.values())
     while count > 0:
         for i in d:
             if a != len(d):
